@@ -1,0 +1,9 @@
+.appNavbar {
+  background: var(--app-background-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.appNavbar .container-fluid {
+  background: rgba(52, 32, 149, 0.2);
+}

@@ -1,0 +1,126 @@
+/* styles/plans.css */
+
+:root {
+  --basic-color: #000ed4;
+  --pro-color: #e7ad00;
+  --business-color: #0e0d0d;
+  --basic-color-hover: #040d86;
+  --pro-color-hover: #8d6b04;
+  --business-color-hover: #555252;
+  /* --card-background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
+  --card-background: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
+  --card-body-min-height: 430px;
+  --price-car-margin: 2rem;
+}
+
+.price-card {
+  background: var(--card-background);
+  padding: 2.5rem;
+  margin-top: var(--price-car-margin);
+  text-align: start;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card-body {
+  min-height: var(--card-body-min-height);
+}
+.price-card-header {
+  margin-bottom: 2rem;
+}
+
+.price-card-header-title h2 {
+  font-size: 28px;
+  margin: 0;
+}
+.basic .price-card-header-title h2 {
+  color: var(--basic-color);
+}
+.pro .price-card-header-title h2 {
+  color: var(--pro-color);
+}
+.business .price-card-header-title h2 {
+  color: var(--business-color);
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #777;
+}
+
+.price {
+  font-size: 32px;
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+
+.basic .price {
+  color: var(--basic-color);
+}
+
+.pro .price {
+  color: var(--pro-color);
+}
+
+.business .price {
+  color: var(--business-color);
+}
+
+.price span {
+  font-size: 16px;
+  color: #777;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.featureList li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.featureList li.disabled {
+  color: #ccc;
+}
+
+.select-price-button {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+.basic .select-price-button {
+  background-color: var(--basic-color);
+}
+
+.basic .select-price-button:hover {
+  background-color: var(--basic-color-hover);
+}
+
+.pro .select-price-button {
+  background-color: var(--pro-color);
+}
+
+.pro .select-price-button:hover {
+  background-color: var(--pro-color-hover);
+}
+.business .select-price-button {
+  background-color: var(--business-color);
+}
+.business .select-price-button:hover {
+  background-color: var(--business-color-hover);
+}

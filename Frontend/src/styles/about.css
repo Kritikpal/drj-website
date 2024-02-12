@@ -1,0 +1,12 @@
+.accessories-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+.accessories-list li {
+  margin-bottom: 1rem;
+  font-size: large;
+  font-weight: bold;
+}
+.accessories-list i {
+  margin-right: 1rem;
+}

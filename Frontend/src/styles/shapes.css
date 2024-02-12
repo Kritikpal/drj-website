@@ -1,0 +1,55 @@
+* {
+  --border-radius: 200px;
+  --border-radius-large: 300px;
+  --card-image-width: 200px;
+  --var-main-cylinder-height: 400px;
+  --var-small-cylinder-height: 200px;
+}
+
+.cilender,
+.cilender-bottom-right,
+.cilender-top-right {
+  overflow: hidden;
+}
+
+.cilender img,
+.cilender-bottom-right img,
+.cilender-top-right img {
+  transition: all 0.3s ease-in-out;
+}
+.cilender img:hover,
+.cilender-bottom-right img:hover,
+.cilender-top-right img:hover {
+  transform: scale(1.2);
+}
+.cilender {
+  border-radius: var(--border-radius);
+  height: var(--var-main-cylinder-height);
+}
+.cilender-bottom-right {
+  height: var(--var-small-cylinder-height);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius-large);
+}
+.cilender-top-right {
+  height: var(--var-small-cylinder-height);
+  border-bottom-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius-large);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+@media (max-width: 576px) {
+  * {
+    --border-radius: 50px;
+    --border-radius-large: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    --border-radius: 50px;
+    --border-radius-large: 100px;
+    --card-image-widt: 200px;
+  }
+}

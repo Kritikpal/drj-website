@@ -1,0 +1,30 @@
+.service-section {
+  /* background-image: var(--app-background-color-horizental); */
+  background: var(--app-background-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-card {
+  background: var(--glassmorph-effect-background);
+  box-shadow: var(--glass-morph-effect-shadow);
+  border-bottom: var(--glass-morph-effect-border);
+  border-top: var(--glass-morph-effect-border);
+  border-radius: 10px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.service-icon {
+  color: var(--app-highlight-color);
+  background-image: var(--app-background-color);
+  border-radius: 50%;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
