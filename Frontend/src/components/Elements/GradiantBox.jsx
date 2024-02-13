@@ -1,7 +1,12 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-function GradiantBox({ children = <></>, sx = {} }) {
+function GradiantBox({
+  children = <></>,
+  sx = {},
+  className = "",
+  style = {},
+}) {
   let app_gradient_sx = {
     ...sx,
     backgroundColor: "#021736",
@@ -10,7 +15,9 @@ function GradiantBox({ children = <></>, sx = {} }) {
   };
   return (
     <Box>
-      <Box sx={app_gradient_sx}>{children}</Box>
+      <Box className={className} style={style} sx={app_gradient_sx}>
+        {children}
+      </Box>
     </Box>
   );
 }

@@ -19,15 +19,9 @@ function PortfolioSection() {
       <Typography variant="h3" className="text-center">
         My Portfolio
       </Typography>
-      <ImageList
-        className=" mt-xl-5 mt-sm-2"
-        gap={10}
-        variant="quilted"
-        cols={3}
-      >
+      <ImageList gap={10} variant="masonry" cols={3}>
         {portfolioImages.map((image) => (
           <ImageListItem
-            sx={{}}
             rows={image.rows}
             cols={image.cols}
             className="portfolio-image-section"

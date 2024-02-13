@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import "./AppNavbar/appNavbar.css";
-import second from "../Elements/AppCard";
-import AppCard from "../Elements/AppCard";
+
 function AppNavbar({ menu = [] }) {
   const location = useLocation();
   const [activeLink, setActiveLink] = React.useState("");
@@ -33,12 +32,19 @@ function AppNavbar({ menu = [] }) {
           overflow: "hidden",
         }}
       >
-        <Navbar.Brand
-          className="drjlogo my-1 mx-2 mx-sm-3 mx-md-4 mx-lg-5"
-          href="#home"
+        <Box
+          className="nav-logo"
+          sx={{
+            marginLeft: {
+              xs: "1rem",
+              sm: "1rem",
+              md: "1rem",
+              lg: "1rem",
+            },
+          }}
         >
-          DRJ
-        </Navbar.Brand>
+          <div data-text="DRJ">DRJ</div>
+        </Box>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-center w-100">

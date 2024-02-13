@@ -13,8 +13,8 @@ function Index() {
         description={" I'm Dibya Jena."}
       />
       <AboutTopContent />
-      <DeviceDetails />
       <ExperienceSection />
+      <DeviceDetails />
     </div>
   );
 }

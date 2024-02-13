@@ -1,11 +1,24 @@
 import React from "react";
 import "./apploader.css";
+import { Box } from "@mui/material";
 
 function AppLoader() {
   return (
-    <div className="h-100 d-flex justify-content-center align-items-center">
-      <div className="loader"></div>
-    </div>
+    <Box
+      sx={{
+        width: "100%",
+        height: "100vh",
+        top: "0",
+        backgroundColor: "black",
+        position: "absolute",
+        display: "flex",
+        zIndex: "10000000",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Box className="custom-loader"></Box>
+    </Box>
   );
 }
 

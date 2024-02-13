@@ -1,5 +1,6 @@
 import { Box, Paper } from "@mui/material";
 import React from "react";
+import AppCard from "../Elements/AppCard";
 
 function PriceCard({
   className = "basic",
@@ -9,11 +10,9 @@ function PriceCard({
   features = [],
 }) {
   return (
-    <Paper
-      variant="elevation"
-      elevation={3}
-      className={"price-card " + className}
-      sx={{ borderRadius: "10px" }}
+    <AppCard
+      className={className}
+      sx={{ borderRadius: "10px", p: { xs: "1rem", sm: "1rem", md: "2rem" } }}
     >
       <Box className="price-card-body">
         <Box className="price-card-header">
@@ -34,7 +33,7 @@ function PriceCard({
       </Box>
 
       <button className="select-price-button">Get Started</button>
-    </Paper>
+    </AppCard>
   );
 }
 

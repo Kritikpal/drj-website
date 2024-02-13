@@ -19,7 +19,7 @@ function CustomInputField({
   return (
     <>
       {type === "material" ? (
-        <Box sx={{ paddingTop: "10px", width: "100%" }}>
+        <Box sx={{ paddingTop: "1rem", width: "100%" }}>
           <TextField
             id={id}
             name={name}

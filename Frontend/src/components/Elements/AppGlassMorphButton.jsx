@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
 
-function AppGlassMorphButton({ children, sx }) {
+function AppGlassMorphButton({ children = <></>, sx = {} }) {
   const app_glass_morph_button_style = {
     ...sx,
     padding: "16px 32px",

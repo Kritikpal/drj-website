@@ -5,30 +5,29 @@ import { mainMenu } from "./menus/mainMenu";
 import AppFooter from "./components/layout/AppFooter";
 import { Suspense } from "react";
 import AppLoader from "./components/Elements/loder/AppLoader";
+import GradiantBox from "./components/Elements/GradiantBox";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<AppLoader />}>
+    <div>
+      <BrowserRouter>
         <AppNavbar menu={mainMenu} />
-      </Suspense>
-      <div className="bg-dark text-white">
         <Suspense fallback={<AppLoader />}>
-          <Routes>
-            {mainMenu.map((item) => (
-              <Route
-                key={item.link}
-                path={item.link}
-                element={item.component}
-              />
-            ))}
-          </Routes>
+          <GradiantBox className="text-white">
+            <Routes>
+              {mainMenu.map((item) => (
+                <Route
+                  key={item.link}
+                  path={item.link}
+                  element={item.component}
+                />
+              ))}
+            </Routes>
+            <AppFooter />
+          </GradiantBox>
         </Suspense>
-        <Suspense fallback={<AppLoader />}>
-          <AppFooter />
-        </Suspense>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 }
 

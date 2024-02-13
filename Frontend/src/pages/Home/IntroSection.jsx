@@ -2,12 +2,23 @@ import { Box, Button, Card } from "@mui/material";
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import AppGlassMorphButton from "../../components/Elements/AppGlassMorphButton";
+import AppCard from "../../components/Elements/AppCard";
 
 function IntroSection({ className }) {
   return (
-    <Box sx={{ padding: { md: 2, lg: 3 } }} className={className}>
-      <Row>
-        <Col xs={12} md={6}>
+    <AppCard
+      sx={{
+        margin: { xs: "1rem", sm: "1rem", md: "2rem", lg: "2rem" },
+      }}
+      className={className}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column-reverse", md: "row" },
+        }}
+      >
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <div className="mt-5 mx-auto" style={{ maxWidth: "80%" }}>
             <h1 className="text-center text-md-start mb-4">
               Hello, I'm Dibya Ranjan Jena, a professional photographer based in
@@ -33,23 +44,26 @@ function IntroSection({ className }) {
               </li>
             </ul>
             <div className="m-1">
-              <AppGlassMorphButton>Read More</AppGlassMorphButton>
+              <AppGlassMorphButton sx={{ mb: "1rem" }}>
+                Read More
+              </AppGlassMorphButton>
             </div>
           </div>
-        </Col>
-        <Col xs={12} md={6} className="mt-4 mt-md-0">
-          <div className="d-flex justify-content-center">
-            <Card style={{ width: "80%", maxWidth: "400px" }} className="mb-3">
-              <img
-                style={{ width: "100%", height: "auto" }}
-                src="images/introSmall.jpg"
-                alt="Photographer"
-              />
-            </Card>
-          </div>
-        </Col>
-      </Row>
-    </Box>
+        </Box>
+        <Box sx={{ width: { xs: "100%", md: "50%" }, height: "100%" }}>
+          <img
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+            src="images/introSmall.jpg"
+            alt="Photographer"
+          />
+        </Box>
+      </Box>
+    </AppCard>
   );
 }
 

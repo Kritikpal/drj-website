@@ -9,7 +9,7 @@ function ContactPage() {
   return (
     <Box>
       <AboutUsBanner title="Contact Me" description=" Let's get in touch" />
-      <ContactPageHeader />
+      {/* <ContactPageHeader /> */}
       <ContactForm />
       {/* <TestForm /> */}
     </Box>

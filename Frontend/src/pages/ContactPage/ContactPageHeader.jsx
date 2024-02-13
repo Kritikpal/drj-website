@@ -1,45 +1,35 @@
 import React from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
-import { Col, Row, Stack } from "react-bootstrap";
+import { Box, Divider, Typography } from "@mui/material";
+import { Col, Row } from "react-bootstrap";
 import { addresses, phoneDetails, socialLinks } from "../../api/addresses";
-import "../../styles/gradiant.css";
+import AppCard from "../../components/Elements/AppCard.jsx";
 
 function ContactPageHeader() {
-  const AddressCard = ({ icon, title, description, type = "address" }) => {
+  const AddressCard = ({ icon, title, description }) => {
     return (
-      <Paper
+      <AppCard
         sx={{
           padding: "2rem",
-          marginTop: "2rem",
           borderRadius: "10px",
           overflow: "hidden",
+          marginBottom: "2rem",
         }}
-        className={
-          type == "address"
-            ? "bg-cherry"
-            : type == "phone"
-            ? "bg-cyan"
-            : "bg-green"
-        }
       >
         <Row className="align-items-center">
           <Col xs={3}>
-            <Box
+            <AppCard
               sx={{
-                padding: {
-                  xs: "1rem",
-                  sm: "1rem",
-                  md: "1.5rem",
-                  lg: "2rem",
-                },
+                height: "50px",
+                width: "50px",
+                borderRadius: "50%",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                color: "yellow",
               }}
-              className="app-bg-glass-gradient rounded-circle"
             >
               <i className={"fas " + icon + ""}></i>
-            </Box>
+            </AppCard>
           </Col>
           <Col xs={9}>
             <Box item xs={9} sm={10}>
@@ -52,41 +42,23 @@ function ContactPageHeader() {
             </Box>
           </Col>
         </Row>
-      </Paper>
+      </AppCard>
     );
   };
 
   return (
-    <Box
-      sx={{ padding: { xs: "1rem", sm: "1rem", md: "2rem", lg: "3rem" } }}
-      className="address-layout add-bg-dark-gradient"
-    >
-      <Row xs={1} md={2} lg={3} gutter={2}>
-        <Col xs={12} sm={6} md={4}>
-          <AddressCard
-            type="address"
-            icon={addresses.icon}
-            title={addresses.title}
-            description={addresses.description}
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4}>
-          <AddressCard
-            type="phone"
-            icon={phoneDetails.icon}
-            title={phoneDetails.title}
-            description={phoneDetails.description}
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4}>
-          <AddressCard
-            type="social"
-            icon={socialLinks.icon}
-            title={socialLinks.title}
-            description={socialLinks.description}
-          />
-        </Col>
-      </Row>
+    <Box sx={{ display: "flex", flexDirection: "row", width: "100%" }}>
+      <Box sx={{ width: "100%" }}>
+        {[1, 2, 3].map((a) => {
+          return (
+            <AddressCard
+              icon={addresses.icon}
+              title={addresses.title}
+              description={addresses.description}
+            />
+          );
+        })}
+      </Box>
     </Box>
   );
 }

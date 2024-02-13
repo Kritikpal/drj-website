@@ -12,8 +12,8 @@ function ServicePage() {
           title="My Services"
           description="I Provide All Kind Of Services."
         />
-        <ServiceSection />
         <PriceSection />
+        <ServiceSection />
       </div>
     </div>
   );
