@@ -1,4 +1,5 @@
-.app-card {
+.app-card,
+.app-card-green {
   background-color: rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
@@ -6,27 +7,47 @@
   box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
   border: 1.5px solid rgba(255, 255, 255, 0.06);
   border-radius: 8px;
+  z-index: 100000000;
 }
 
-.shape1 {
+.right-yellow,
+.left-yellow,
+.left-blue,
+.right-blue,
+.left-red,
+.right-red {
   height: 150px;
   width: 150px;
   position: absolute;
-  background: -o-linear-gradient(315deg, #ff5b84, #eb3461);
-  background: linear-gradient(135deg, #ff5b84, #eb3461);
   border-radius: 50%;
-  bottom: 130px;
-  right: -50px;
-  z-index: -1;
+  z-index: 0;
 }
-.shape2 {
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  background: -o-linear-gradient(315deg, #426cf8, #3ebdf0);
-  background: linear-gradient(135deg, #426cf8, #3ebdf0);
-  border-radius: 50%;
-  top: 100px;
-  left: -50px;
-  z-index: -1;
+
+.right-yellow,
+.right-blue,
+.right-red {
+  bottom: -10%;
+  right: -5%;
+}
+.left-yellow,
+.left-blue,
+.left-red {
+  top: -10px;
+  left: -5%;
+}
+
+.left-yellow,
+.right-yellow {
+  background: -o-linear-gradient(315deg, #f7ff5b, #ebe834);
+  background: linear-gradient(135deg, #f7ff5b, #ebe834);
+}
+.left-red,
+.right-red {
+  background: -o-linear-gradient(315deg, #ff5b5b, #eb3434);
+  background: linear-gradient(135deg, #ff5b5b, #eb3434);
+}
+.left-blue,
+.right-blue {
+  background: -o-linear-gradient(315deg, #6e5bff, #3449eb);
+  background: linear-gradient(135deg, #6e5bff, #3449eb);
 }

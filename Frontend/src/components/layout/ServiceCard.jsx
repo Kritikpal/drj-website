@@ -19,14 +19,19 @@ function ServiceCard({
         }}
       >
         <div className="d-flex flex-row align-items-center mb-3">
-          <span
+          <AppCard
+            sx={{
+              borderRadius: "50%",
+              height: "50px",
+              width: "50px",
+            }}
             style={{
               color: "var(--app-highlight-color)",
             }}
-            className="service-icon p-3 d-flex align-items-center justify-content-center"
+            className="p-3 d-flex align-items-center justify-content-center"
           >
             <i className={"fas " + icon + " "}></i>
-          </span>
+          </AppCard>
           <div className="d-flex flex-column mx-2">
             <span>{heading}</span>
             <span className="text-black-50">{subheading}</span>

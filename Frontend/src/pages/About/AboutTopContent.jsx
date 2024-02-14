@@ -19,13 +19,17 @@ function AboutTopContent() {
 
 function Content() {
   return (
-    <Row>
-      <Col lg={8} sm={12}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column-reverse", md: "row" },
+      }}
+    >
+      <Box sx={{ width: { xs: "100%", md: "70%" } }}>
         <Box
           sx={{
             padding: { xs: "1rem", sm: "1rem", md: "2rem", lg: "3rem" },
           }}
-          className=""
         >
           <Typography
             sx={{
@@ -84,24 +88,22 @@ function Content() {
             <AppGlassMorphButton>About Me</AppGlassMorphButton>
           </Box>
         </Box>
-      </Col>
-      <Col lg={4} sm={12}>
-        <Box sx={{ position: "relative" }} height={"300px"} width={"100%"}>
-          <Paper>
-            <img
-              src="images/aboutImage.jpg"
-              alt=""
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                objectPosition: "center",
-              }}
-            />
-          </Paper>
-        </Box>
-      </Col>
-    </Row>
+      </Box>
+      <Box sx={{ width: { xs: "100%", md: "30%" } }}>
+        <Paper>
+          <img
+            src="images/aboutImage.jpg"
+            alt=""
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              objectPosition: "center",
+            }}
+          />
+        </Paper>
+      </Box>
+    </Box>
   );
 }
 

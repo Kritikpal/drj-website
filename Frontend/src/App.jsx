@@ -6,6 +6,7 @@ import AppFooter from "./components/layout/AppFooter";
 import { Suspense } from "react";
 import AppLoader from "./components/Elements/loder/AppLoader";
 import GradiantBox from "./components/Elements/GradiantBox";
+import MainBox from "./components/Elements/MainBox";
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
       <BrowserRouter>
         <AppNavbar menu={mainMenu} />
         <Suspense fallback={<AppLoader />}>
-          <GradiantBox className="text-white">
+          <MainBox
+            sx={{ maxWidth: "100%", overflow: "hidden" }}
+            className="text-white"
+          >
             <Routes>
               {mainMenu.map((item) => (
                 <Route
@@ -24,7 +28,7 @@ function App() {
               ))}
             </Routes>
             <AppFooter />
-          </GradiantBox>
+          </MainBox>
         </Suspense>
       </BrowserRouter>
     </div>

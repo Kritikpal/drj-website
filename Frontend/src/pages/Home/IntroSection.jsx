@@ -18,7 +18,7 @@ function IntroSection({ className }) {
           flexDirection: { xs: "column-reverse", md: "row" },
         }}
       >
-        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", lg: "60%" } }}>
           <div className="mt-5 mx-auto" style={{ maxWidth: "80%" }}>
             <h1 className="text-center text-md-start mb-4">
               Hello, I'm Dibya Ranjan Jena, a professional photographer based in
@@ -50,7 +50,7 @@ function IntroSection({ className }) {
             </div>
           </div>
         </Box>
-        <Box sx={{ width: { xs: "100%", md: "50%" }, height: "100%" }}>
+        <Box sx={{ width: { xs: "100%", lg: "40%" }, height: "100%" }}>
           <img
             style={{
               width: "100%",

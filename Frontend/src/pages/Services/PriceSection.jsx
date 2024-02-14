@@ -2,7 +2,7 @@ import React from "react";
 import { myplans } from "../../api/myplans";
 import PriceCard from "../../components/layout/PriceCard";
 import { Col, Row } from "react-bootstrap";
-import "../../styles/plans.css";
+// import "../../styles/plans.css";
 import { Box } from "@mui/material";
 
 function PriceSection() {

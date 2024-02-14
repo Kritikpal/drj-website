@@ -10,8 +10,8 @@ function CustomInputField({
   value,
   error,
   onChange,
-  type = "bootstrap",
-  //   type = "material",
+  // type = "bootstrap",
+  type = "material",
   ...props
 }) {
   const icon = getIconForForm(name);
@@ -24,6 +24,8 @@ function CustomInputField({
             id={id}
             name={name}
             fullWidth
+            variant="filled"
+            // color="white"
             label={label}
             value={value}
             onChange={onChange}
