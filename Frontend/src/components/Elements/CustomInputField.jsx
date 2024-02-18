@@ -32,6 +32,9 @@ function CustomInputField({
             error={error}
             helperText={error}
             {...props}
+            sx={{
+              color: "white",
+            }}
           />
         </Box>
       ) : (

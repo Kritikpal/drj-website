@@ -4,3 +4,13 @@
 .contact-from textarea:focus {
   color: white;
 }
+.contact-from input::placeholder {
+  color: white;
+}
+.contact-from label {
+  color: white;
+}
+
+.css-19b0mxu-MuiFormLabel-root-MuiInputLabel-root {
+  color: white;
+}

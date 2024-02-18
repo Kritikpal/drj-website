@@ -5,7 +5,7 @@ function AppGlassMorphButton({ children = <></>, sx = {} }) {
   const app_glass_morph_button_style = {
     ...sx,
     padding: "16px 32px",
-    color: "#637498",
+    color: "white",
     backgroundColor: "transparent",
     border: "1px solid rgba(99, 116, 152, 0.4)",
     fontFamily: '"Raleway", sans-serif',
